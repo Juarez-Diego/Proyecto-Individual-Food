@@ -22,6 +22,7 @@ server.use((req, res, next) => {
   next();
 });
 
+// Aqui se van a usar la rutas directamente del archivo Routes.js
 server.use('/', routes);
 
 // Error catching endware.
