@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
 
+
+
 require('./db.js');
 
 const server = express();
@@ -23,7 +25,8 @@ server.use((req, res, next) => {
 });
 
 // Aqui se van a usar la rutas directamente del archivo Routes.js
-server.use('/', routes);
+server.use('/', routes)
+server.use('/recipes', routes);
 
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
