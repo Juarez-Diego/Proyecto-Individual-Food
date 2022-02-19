@@ -150,10 +150,10 @@ router.get("/types", async (req, res) => {
 
 router.post("/recipe", async (req, res) => {
 
-    const {name_of_dish, score, summary, Health_Level, steps, image} = req.body
+    const {name_of_dish, score, summary, Health_Level, steps, diets, image} = req.body
 
-    if (!name_of_dish) return res.status(400).send({error: 'Che, te falta un nombre!'})
-    if (!summary) return res.status(400).send({error: 'Che, te falta un summary!'})
+    if (!name_of_dish) return res.status(400).send('Che, te falta un nombre!')
+    if (!summary) return res.status(400).send('Che, te falta un summary!')
 
     const recipe = await Recipe.create({
         name_of_dish,
@@ -161,11 +161,18 @@ router.post("/recipe", async (req, res) => {
         summary,
         Health_Level,
         steps,
+        diets,
         image
     });
 
-    await Recipe.setDiets(Diet);
-    return res.status(200).send("Receta agregada con exito!")
+    const searchDiets = await Diet.findAll({
+        where: {
+            name: diets
+        }
+    })
+    
+    recipe.addDiets(searchDiets);
+    res.status(200).send("A comer se ha dicho!")
 
 });
 
