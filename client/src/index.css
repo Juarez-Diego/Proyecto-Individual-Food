@@ -1,4 +1,8 @@
 body {
+  background-size: cover;
+  background-image: url('./Images/pexels-ella-olsson-1640774.jpg');
+
+  /* This is the default stuff  */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
