@@ -171,7 +171,7 @@ router.post("/recipe", async (req, res) => {
         }
     })
     
-    recipe.addDiets(searchDiets);
+    recipe.setDiets(searchDiets);
     res.status(200).send("A comer se ha dicho!")
 
 });

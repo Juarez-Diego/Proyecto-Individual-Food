@@ -8,8 +8,8 @@ export function Nav() {
       
         <nav className="navigation" > 
           <Link to="/">LOGO NAME</Link>
-            <Link to="/recipes">Explore Recipes</Link>
-            <Link to="/recipe">Create Recipe</Link> 
+          <Link to="/home">Explore Recipes</Link>
+          <Link to="/recipe">Create Recipe</Link> 
         </nav>
     </div>
   );
