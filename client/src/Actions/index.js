@@ -1,4 +1,3 @@
-import React from "react";
 import axios from "axios";
 
 // Aqui me traigo todas la recetas tanto de la API como de la DB, conexion con el back
@@ -22,3 +21,20 @@ export function getRecipeByName(name){
         })
     }
 }
+
+export function getDiets(){
+    return async function(dispatch){
+        const allDiets = await axios.get("http://localhost:3001/types")
+        return dispatch({
+            type: "GET_DIETS",
+            payload: allDiets.data
+        })
+    }
+}
+
+export function createRecipe(payload){
+    return async function(dispatch){
+        const response = await axios.post("http://localhost:3001/recipe", payload)
+    }
+}
+

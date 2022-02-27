@@ -8,6 +8,7 @@ import "../Home/Home.css"
 import {Card} from "../Card/Card"
 import {Paginado} from "../Paginado/Paginado"
 import SearchBar from "../SearchBar/SearchBar";
+import Filters from "../Filters/Filters";
 
 export function Home() {
 
@@ -44,34 +45,7 @@ const pages = function(pageNumber) {
      <h1>Componente Home</h1>
 
       
-        <span>Sort By: </span>
-			<select>
-			  <option default value=""></option>
-			  <option value="Ascending">A-Z</option>
-			  <option value="Descending">Z-A</option>
-		  	</select>
-
-        <span>Order By: </span>
-			<select>
-			  <option default value=""></option>
-			  <option value="high">High</option>
-			  <option value="low">Low</option>
-    		</select>
-
-        <span>Filter By Diet: </span>
-			<select>
-			  	<option default value=""></option>
-		      	<option value="gluten free">Gluten Free</option>
-				<option value="dairy free">Ketogenic</option>
-				<option value="vegetarian">Vegetarian</option>
-				<option value="lacto vegetarian">Lacto-Vegetarian</option>
-				<option value="lacto ovo vegetarian">Ovo-Vegetarian</option>
-				<option value="vegan">Vegan</option>
-				<option value="pescatarian">Pescetarian</option>
-				<option value="pescatarian">Paleo</option>
-				<option value="primal">Primal</option>
-				<option value="whole 30">Whole30</option>;
-			</select>
+			<Filters />
 			<SearchBar />
 			<Paginado 
 				recipesPerPage={recipesPerPage}

@@ -1,8 +1,8 @@
 import React from "react";
-import {useDispatch, useSelector} from "react-redux"
-import { useState, useEffect } from "react";
+import {useDispatch} from "react-redux"
+import { useState } from "react";
 import { getRecipeByName } from "../../Actions";
-import Card from "../Card/Card";
+
 
 export function SearchBar({getRecipes}) {
 const [searchWord, setSearchWord] = useState("")
