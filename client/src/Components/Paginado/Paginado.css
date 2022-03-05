@@ -1,0 +1,12 @@
+
+
+.paginado_list{
+    list-style: none;
+    display: inline-flex;
+    margin-right: 40px;
+    background-color: #264653;
+    color: antiquewhite;
+    border-radius: 5px;
+    padding: 15px;
+    cursor:pointer;
+}

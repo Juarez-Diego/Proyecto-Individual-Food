@@ -1,12 +1,71 @@
 .form {
-    height: 500px;
-    width: 700px;
+   
+    overflow: hidden;
+    position: relative;
+    height: 600px;
+    /* height: auto; */
+    width: 800px;
     background-color: #264653;
-    margin: auto;
+    margin-top: 50px;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 30px;
     color: antiquewhite;
+    /* overflow-y: scroll */
+
+}
+
+.form_main_title{
+    margin-right: 270px;
+}
+
+.form_text{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    width: 300px;
+    height: 50;
+    
+}
+
+.form_diet_title{
+    margin-top: 0px;
+}
+
+.form_checkbox{
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    text-align: right;
+   
+}
+
+.form_button{
+    margin-top: 25px;
+    position:absolute; top:0; right:0;
+    font-size: 15px;
+    display: flex;
+    height: 40px;
+    width: 100px;
+    margin-right: 120px;
+    background-color: #F4A261;
+    color: black;
+    border-radius: 12px;
+    border: none;
+    cursor:pointer;
+    box-shadow: 5px 5px 10px;
+}
+
+.form_boxes {
+    
+    margin-bottom: 15px;
+}
+
+.form_warning{
+    color: aquamarine;
+    margin: 0px;
 }

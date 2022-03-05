@@ -6,9 +6,15 @@ export function LandingPage() {
     return (
       <div>
         <div className='landing' >
-        <h1>Henry Food App</h1>
+        <h1 className='landing_title'>Henry Food App</h1>
+        <h3> A simple web application where you can 
+          find delicious recipes <br/>
+           for all diet types and even create your own.
+        </h3>
+
+        <br/>
           <Link to="/home">
-             <button>Let's Cook!</button>
+             <button className='landing_button'>Let's Eat!</button>
           </Link>
           </div>
       </div>

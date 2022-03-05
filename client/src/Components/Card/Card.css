@@ -1,0 +1,34 @@
+
+.card {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height: 40vh;
+    background-color: #264653;
+    margin: auto;
+    margin-block: 25px;
+    }
+     
+     
+.card {     
+    border: 2px solid black;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    padding: .5rem;
+
+    }
+
+.card_img{
+    border-radius: 5px;
+    border: antiquewhite;
+}
+
+.card_title{
+    color: antiquewhite;
+}
+
+.card_diets{
+    color: antiquewhite;
+}

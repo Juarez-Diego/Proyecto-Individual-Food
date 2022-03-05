@@ -1,6 +1,6 @@
 .landing {
     height: 500px;
-    width: 700px;
+    width: 800px;
     background-color: #264653;
     margin: auto;
     position: fixed;
@@ -11,14 +11,19 @@
     color: antiquewhite;
 }
 
+.landing_title{
+    font-size: 70px;
+    font-family: monaco, Consolas, "Lucida Console";
+}
 
-/* .glass {
-    background: white;
-    min-height: 80vh;
-    width: 60%;
-    background: linear-gradient(
-      to right bottom,
-      rgba(255,255,255, 0.8),
-      rgba(255,255,255, 0.6) 
-    );
-  } */
+.landing_button {
+  width: 150px;
+  height: 50px;
+  font-size: 25px;
+  background-color: #F4A261;
+  color: black;
+  border-radius: 12px;
+  cursor:pointer;
+  border: none;
+  box-shadow: 5px 5px 10px;
+}

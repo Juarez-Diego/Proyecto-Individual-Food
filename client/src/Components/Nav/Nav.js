@@ -7,9 +7,9 @@ export function Nav() {
     <div className="nav">
       
         <nav className="navigation" > 
-          <Link to="/">LOGO NAME</Link>
-          <Link to="/home">Explore Recipes</Link>
-          <Link to="/recipe">Create Recipe</Link> 
+          <Link to="/" style={{ color: 'black', textDecoration: 'none' }} >Henry Food App</Link>
+          <Link to="/home" style={{ color: 'black', textDecoration: 'none' }}>Explore Recipes</Link>
+          <Link to="/recipe" style={{ color: 'black', textDecoration: 'none' }}>Create Recipe</Link> 
         </nav>
     </div>
   );

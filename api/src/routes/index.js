@@ -26,7 +26,7 @@ const apiRecipes = async function(){
             name_of_dish: info.title,
             score: info.spoonacularScore,
             summary: info.summary,
-            apiId: info.id,
+            id: info.id,
             Health_Level: info.healthScore,
             steps: info.analyzedInstructions[0]?.steps?.map((info) => info.step), 
             // steps: jose.analyzedInstructions[0].steps.map(jose => jose.step),
@@ -41,6 +41,7 @@ const apiRecipes = async function(){
 // console.log(apiRecipes())
 
 // Funcion que me trae los resultados de la Base de Datos, cuyo nombre coincide con el query.
+// 
 const dbRecipes = async function(){
     return await Recipe.findAll({
         include: {
@@ -92,10 +93,11 @@ router.get("/recipes", async (req, res) => {
 router.get("/recipes/:idReceta", async (req, res) => {
 
     const {idReceta} = req.params
+    console.log(idReceta)
     let finalFunction = await allRecipes()
 
     if(idReceta) {
-        const receta = await finalFunction.filter(lpm => lpm.id || lpm.apiId == idReceta)
+        const receta = await finalFunction.filter(lpm => lpm.id == idReceta || lpm.apiId == idReceta)
         if(receta.length > 0) {
             res.status(200).json(receta)
         }
@@ -168,7 +170,8 @@ router.post("/recipe", async (req, res) => {
     const searchDiets = await Diet.findAll({
         where: {
             name: diets
-        }
+        },
+
     })
     
     recipe.setDiets(searchDiets);

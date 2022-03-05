@@ -1,6 +1,6 @@
 /* .home {
-    height: 500px;
-    width: 700px;
+    height: 400px;
+    width: 200px;
     background-color: #264653;
     margin: auto;
     position: fixed;
@@ -10,3 +10,49 @@
     border-radius: 30px;
     color: antiquewhite;
 } */
+
+.home_filters{
+    color: antiquewhite;
+    background-color: #264653;
+    height: 50px;
+    width: 800px;
+    display: flex;
+    margin-left: 60px;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.home_paginado{
+    display: inline-flex;
+}
+
+.home_recipe_card{
+    height: 400px;
+    width: 200px;
+    background-color: #264653;
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    color: antiquewhite;
+    margin-bottom: 40px;
+}
+
+/* .home_order{
+    margin-right: 10px;
+}
+
+.home_sort{
+    margin-right: 10px;
+}
+
+.home_diets{
+    margin-right: 10px;
+} */
+
+.home_search{
+    margin-top: 35px;
+}

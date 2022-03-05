@@ -1,0 +1,34 @@
+.detail {
+    color: black;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: #e9d8a6;
+    margin: auto;
+    margin-block: 25px;
+    border-radius: 15px;
+}
+
+.detial_name{
+    color: #264653;
+    margin-bottom: 20px;
+}
+
+.detail_img{
+    border-radius: 15px;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+
+.detail_summary{
+    width: 70%;
+    margin: auto;
+    margin-left: 310px;
+    text-align: center;
+
+}

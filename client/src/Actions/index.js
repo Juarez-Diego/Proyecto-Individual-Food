@@ -38,3 +38,32 @@ export function createRecipe(payload){
     }
 }
 
+export function recipeDetails(id){
+    return async function(dispatch){
+        let oneRecipe = await axios.get(`http://localhost:3001/recipes/${id}`)
+        return dispatch({
+             type: "RECIPE_DETAILS", 
+             payload: oneRecipe.data})
+    }
+}
+
+export function orderAlphabetically(payload){
+    return {
+        type: "SORT_ALPHABETICALLY",
+        payload
+    }
+}
+
+export function sortByScore(payload){
+    return {
+        type: "SORT_BY_SCORE",
+        payload
+    }
+}
+
+export function sortByDiets(payload){
+    return {
+        type: "SORT_BY_DIETS",
+        payload
+    }
+}
